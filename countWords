@@ -1,0 +1,26 @@
+function countWords(str) {
+
+  if (str === '') {
+      return {};
+  } 
+  // create a result object
+  var result = {};
+  // split input string into an array of words
+  var words = str.split(' ');
+  // iterate over the array of words string
+  for (var i = 0; i < words.length; i++) {
+      // if we have not counted the current word yet 
+      if (result[words[i]] === undefined) {
+        // instantiate for the current word in the object
+        result[words[i]] = 1;
+      // otherwise      
+      } else {
+        // increment the value of the current word in the object  
+        result[words[i]] += 1;  
+      }
+  }
+
+
+  // return result object
+  return result; 
+}
